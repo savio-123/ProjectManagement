@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../../services/api";
 
+import Navbar from "../../components/Navbar";
+import Sidebar from "../../components/Sidebar";
 
 function AddProject(){
     const [form, setForm] = useState({
@@ -38,6 +40,10 @@ function AddProject(){
     };
 
     return(
+    <>
+    <Navbar />
+    <div className="d-flex">
+        <Sidebar/>
         <div className="container mt-4">
            <h2>Add Project</h2>
 
@@ -97,6 +103,8 @@ function AddProject(){
 
                 </form>
              </div>   
+            </div>
+           </> 
     );
 }
 

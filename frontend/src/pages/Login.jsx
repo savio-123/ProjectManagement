@@ -37,36 +37,60 @@ function Login() {
         }
     };
     return (
-          <div className="container mt-5">  
-             <div className="row justify-content-center">
-                <div className="col-md-4">
-                    <div className="card p-4">
-                        <h3 className="text-center mb-4">
-                            Login
-                        </h3>
-                        <input
-                            type="text"
-                            placeholder="Username"
-                            className="form-control mb-3"
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)}
-                        />
-                        <input
-                            type="password"
-                            placeholder="Password"
-                            className="form-control mb-3"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                        />
-                        <button
-                            className="btn btn-primary w-100"
-                            onClick={handleLogin}
-                        >
-                            Login
-                        </button>
-                    </div>
-              </div>
+        <div
+            className="d-flex align-items-center justify-content-center min-vh-100"
+            style={{ backgroundColor: "#4f90ff" }}
+        >
+            <div className="card shadow border-0 p-4" style={{ width: "400px" }}>
+
+                <div className="text-center mb-4">
+                    <h2 className="fw-bold">Project Management</h2>
+                    <p className="text-muted mb-0">
+                        Login to your account
+                    </p>
+                </div>
+
+                <div className="mb-3">
+                    <label className="form-label fw-semibold">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="Enter username"
+                        className="form-control form-control-lg"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                    />
+                </div>
+
+                <div className="mb-4">
+                    <label className="form-label fw-semibold">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        placeholder="Enter password"
+                        className="form-control form-control-lg"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                </div>
+
+                <button
+                    className="btn btn-primary btn-lg w-100"
+                    onClick={handleLogin}
+                >
+                    Login
+                </button>
+
+                <p className="text-center text-muted mt-4 mb-0">
+                    Project Management System
+                </p>
+
             </div>
+
             <ToastContainer />
         </div>
     );
